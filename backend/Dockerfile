@@ -1,9 +1,9 @@
 FROM python:3.8
 
-RUN mkdir -p /code/backend
-WORKDIR /code/backend
+WORKDIR /backend
 
-COPY requirements.txt /code/backend
+COPY requirements.txt /backend
 RUN pip install -r requirements.txt
 
-CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
+ENTRYPOINT ["python"]
+CMD ["app.py"]

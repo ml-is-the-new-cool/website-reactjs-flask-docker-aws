@@ -12,3 +12,7 @@ def n():
 @app.route('/')
 def hello():
     return {'time': time.time()}
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
