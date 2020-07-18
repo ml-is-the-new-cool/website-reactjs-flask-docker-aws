@@ -1,16 +1,12 @@
-FROM node:latest as build
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-COPY package.json /usr/src/app
+FROM node:latest
 
-RUN npm install
+WORKDIR /code
+COPY package.json /code
 
-COPY . /usr/src/app
-RUN npm run build
+RUN npm ci
+# COPY . /code
+# RUN npm run build
 
-FROM nginx:alpine
-COPY --from=build /usr/src/app/build /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/nginx.conf
+# EXPOSE 3000
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "start"]
