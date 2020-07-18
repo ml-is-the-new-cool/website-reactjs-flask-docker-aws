@@ -7,12 +7,20 @@ https://medium.com/@dummydevops/containerizing-a-flask-react-app-with-docker-com
 
 # Tools
 
-- ReactJS
-- Flask
+- ReactJS, 
+- Flask, 
 - Certbot, https://certbot.eff.org/
-- AWS
-- Docker
+- Docker, https://www.docker.com/AW
+- AWS, 
 
-# Connect to AWS
+# Docker
+
+## List of useful links
+
+- https://github.com/docker/awesome-compose
+
+# AWS
+
+## Connect to instance through SSH
 
 - ssh -i /path/my-key-pair.pem my-instance-user-name@my-instance-public-dns-name

@@ -3,7 +3,7 @@ FROM node:latest
 WORKDIR /code
 COPY package.json /code
 
-RUN npm ci
+RUN npm install
 # COPY . /code
 # RUN npm run build
 
